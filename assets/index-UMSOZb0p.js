@@ -15643,7 +15643,7 @@ function dx() {
       scores: { player: 0, ai: 0, draws: 0 },
       difficulty: "easy",
     }),
-    n = "/images/vault.gif",
+    n = "https://parwics.com/",
     r = (s) => {
       for (const l of fx) {
         const [u, a, c] = l;
