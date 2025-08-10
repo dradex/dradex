@@ -15718,15 +15718,16 @@ function dx() {
     };
 
   return e.gameStatus === "playerWin"
-    ? T.jsx("div", {
+    ? // If the player wins, render this:
+      T.jsx("div", {
         className:
           "min-h-screen flex items-center justify-center p-4 bg-slate-50",
-        children: T.jsx("a", {
-          href: "images/vault.gif",
+        children: T.jsx("a", { // A hyperlink element
+          href: "images/vault.gif", // Linking to the GIF
           target: "_blank",
           rel: "noopener noreferrer",
           className: "text-black underline",
-          children: n,
+          children: n, // The link text, which is "https://parwics.com/"
         }),
       })
     : T.jsx("div", {
