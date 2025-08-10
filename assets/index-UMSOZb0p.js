@@ -15730,12 +15730,26 @@ function dx() {
   }
 
   T.jsx("div", {
-    className: "min-h-screen flex items-center justify-center p-4 bg-slate-50",
-    children: T.jsx("a", {
-      children: "123"
-    }),
-  })
+    children: [
+      T.jsx("div", {
+        style: {
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          backgroundColor: "white",
+          color: "black",
+          textAlign: "center",
+          padding: "10px 0",
+          zIndex: 1000,
+          fontSize: "16px",
+          fontWeight: "bold",
+        },
+        children: "parwics.com"
+      })]}
+  )
 
+  
   return e.gameStatus === "playerWin"
     ? (typeof source !== "undefined" && source === "game1"
       ? T.jsx("div", {
