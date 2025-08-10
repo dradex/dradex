@@ -15740,7 +15740,23 @@ function dx() {
     };
 
   return e.gameStatus === "playerWin"
+<<<<<<< HEAD
     ? T.jsx(GifRedirect, {})
+=======
+    ? // If the player wins, render this:
+      T.jsx("div", {
+        className:
+          "min-h-screen flex items-center justify-center p-4 bg-slate-50",
+        children: T.jsx("img", { // A hyperlink element
+          src: "https://media.discordapp.net/attachments/1169740201954918400/1404093947676196885/0001-0060-ezgif.com-resize.gif?ex=6899efe3&is=68989e63&hm=802b18fe4a3904193a8a1adb14e44a462d898b0b3ffaf3781c4d55c8c0edf263&=&width=280&height=280", // Linking to the GIF
+          style: "width: 100px"
+          // target: "_blank",
+          // rel: "noopener noreferrer",  
+          // className: "text-black underline",
+          // children: n, // The link text, which is "https://parwics.com/"
+        }),
+      })
+>>>>>>> parent of 9988659 (Update index-UMSOZb0p.js)
     : T.jsx("div", {
         className:
           "min-h-screen flex items-center justify-center p-4 bg-slate-50",
