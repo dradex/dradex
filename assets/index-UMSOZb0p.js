@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const source = new URLSearchParams(window.location.search).get('src');
 console.log(`User came from: ${source}`);
 
