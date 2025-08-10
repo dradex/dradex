@@ -15643,7 +15643,10 @@ function dx() {
       scores: { player: 0, ai: 0, draws: 0 },
       difficulty: "easy",
     }),
-    n = "https://parwics.com/",
+    
+    n = "https://parwics.com/";
+
+
     r = (s) => {
       for (const l of fx) {
         const [u, a, c] = l;
@@ -15717,6 +15720,12 @@ function dx() {
           }
         }, 800);
     };
+  
+  if (source === "game1") {
+    n = "/images/vault.gif"; // or an online GIF URL
+  } else {
+    n = "https://parwics.com/";
+  }
   return e.gameStatus === "playerWin"
     ? T.jsx("div", {
         className:
