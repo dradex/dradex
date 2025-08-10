@@ -15642,7 +15642,7 @@ function dx() {
       scores: { player: 0, ai: 0, draws: 0 },
       difficulty: "easy",
     }),
-    n = "https://parwics.com/",
+    n = "/images/vault.gif",
     r = (s) => {
       for (const l of fx) {
         const [u, a, c] = l;
@@ -15725,7 +15725,7 @@ function dx() {
         children: T.jsx("a", { // A hyperlink element
           href: "images/vault.gif", // Linking to the GIF
           target: "_blank",
-          rel: "noopener noreferrer",
+          rel: "noopener noreferrer",  
           className: "text-black underline",
           children: n, // The link text, which is "https://parwics.com/"
         }),
