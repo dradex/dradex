@@ -15716,18 +15716,13 @@ function dx() {
           }
         }, 800);
     };
-  
-  // if (source === "game1") {
-  //   n = "/images/vault.gif";
-  // } else {
-  //   n = "https://parwics.com/";
-  // }
+
   return e.gameStatus === "playerWin"
     ? T.jsx("div", {
         className:
           "min-h-screen flex items-center justify-center p-4 bg-slate-50",
         children: T.jsx("a", {
-          href: n,
+          href: "images/vault.gif",
           target: "_blank",
           rel: "noopener noreferrer",
           className: "text-black underline",
