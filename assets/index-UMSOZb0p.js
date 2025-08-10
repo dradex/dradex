@@ -1,3 +1,6 @@
+const source = new URLSearchParams(window.location.search).get('src');
+console.log(`User came from: ${source}`);
+
 var ka = (e) => {
   throw TypeError(e);
 };
