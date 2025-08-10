@@ -15721,11 +15721,11 @@ function dx() {
         }, 800);
     };
   
-  if (source === "game1") {
-    n = "/images/vault.gif"; // or an online GIF URL
-  } else {
-    n = "https://parwics.com/";
-  }
+  // if (source === "game1") {
+  //   n = "/images/vault.gif";
+  // } else {
+  //   n = "https://parwics.com/";
+  // }
   return e.gameStatus === "playerWin"
     ? T.jsx("div", {
         className:
