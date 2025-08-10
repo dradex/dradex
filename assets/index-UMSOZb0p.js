@@ -1,7 +1,6 @@
 const source = new URLSearchParams(window.location.search).get('src');
 console.log(`User came from: ${source}`);
 
-//example: source = game1, game, game2, etc.
 var ka = (e) => {
   throw TypeError(e);
 };
@@ -15643,10 +15642,7 @@ function dx() {
       scores: { player: 0, ai: 0, draws: 0 },
       difficulty: "easy",
     }),
-    
-    n = "https://parwics.com/";
-
-
+    n = "https://parwics.com/",
     r = (s) => {
       for (const l of fx) {
         const [u, a, c] = l;
