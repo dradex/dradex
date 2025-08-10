@@ -15729,6 +15729,12 @@ function dx() {
     }
   }
 
+  T.jsx("div", {
+    className: "min-h-screen flex items-center justify-center p-4 bg-slate-50",
+    children: T.jsx("a", {
+      children: "123"
+    }),
+  })
 
   return e.gameStatus === "playerWin"
     ? (typeof source !== "undefined" && source === "game1"
