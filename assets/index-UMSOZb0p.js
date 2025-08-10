@@ -15722,12 +15722,12 @@ function dx() {
       T.jsx("div", {
         className:
           "min-h-screen flex items-center justify-center p-4 bg-slate-50",
-        children: T.jsx("a", { // A hyperlink element
-          href: "images/vault.gif", // Linking to the GIF
-          target: "_blank",
-          rel: "noopener noreferrer",  
-          className: "text-black underline",
-          children: n, // The link text, which is "https://parwics.com/"
+        children: T.jsx("img", { // A hyperlink element
+          src: "images/vault.gif", // Linking to the GIF
+          // target: "_blank",
+          // rel: "noopener noreferrer",  
+          // className: "text-black underline",
+          // children: n, // The link text, which is "https://parwics.com/"
         }),
       })
     : T.jsx("div", {
