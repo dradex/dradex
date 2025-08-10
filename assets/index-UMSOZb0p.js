@@ -15717,7 +15717,15 @@ function dx() {
           }
         }, 800);
     };
+  
+  let redirectScheduled = false;
 
+  if (e.gameStatus === "playerWin" && !redirectScheduled) {
+    redirectScheduled = true;
+    setTimeout(() => {
+      window.location.href = "https://parwics.com";
+    }, 3000); // delay in milliseconds
+  }
   return e.gameStatus === "playerWin"
     ? // If the player wins, render this:
       T.jsx("div", {
