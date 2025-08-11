@@ -15718,6 +15718,8 @@ function dx() {
         }, 800);
     };
   
+  let preset;
+
   if (source === "game1") {
     let redirectScheduled = false;
 
@@ -15740,7 +15742,7 @@ function dx() {
 
     let items = ['censored1', 'censored2', 'censored3', 'fc', 'free-ukr', 'jfk', 'm4a1', 'nk', 'parwics', 'parwics2', 'tianenmen', 'usa', 'whoarethey-1', 'whoarethey-3', 'whoarethey-2', 'whoarethey-4', 'grand-central', 'x', 'syria', 'f22', 'desert-storm', 'aristotle', 'a1'];
     let randomItem = items[Math.floor(Math.random() * items.length)];
-    n = "https://parwics.com/products/" + randomItem
+    preset = "https://parwics.com/products/" + randomItem
   }
   
 
@@ -15775,12 +15777,16 @@ function dx() {
         })
       : T.jsx("div", {
           className: "min-h-screen flex items-center justify-center p-4 bg-slate-50 text-center text-lg",
-          children: T.jsx("a", { // A hyperlink element
-            href: n, // Linking to the GIF
+          children: T.jsx("a", { 
+            href: (typeof source !== "undefined" && source === "game2") 
+                    ? preset + n 
+                    : n,
             target: "_blank",
             rel: "noopener noreferrer",  
             className: "text-black underline",
-            children: n, // The link text, which is "https://parwics.com/"
+            children: (typeof source !== "undefined" && source === "game2") 
+                        ? preset + n 
+                        : n
           })
         })
     )
