@@ -15730,9 +15730,14 @@ function dx() {
   }
 
   const d = new Date();
+  const day = d.getDate();
+  const month = d.getMonth();
+  const year = d.getFullYear();
+
+  const fullString = day.toString() + "." + month.toString() + "." +  year.toString()
 
   if (source === "game2") {
-    console.log(d);
+    console.log(fullString);
     document.getElementById("game2Date").style.display = "block";
   } else {
     document.getElementById("game2Date").style.display = "none";
