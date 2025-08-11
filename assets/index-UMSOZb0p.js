@@ -15742,7 +15742,7 @@ function dx() {
 
     let items = ['censored1', 'censored2', 'censored3', 'fc', 'free-ukr', 'jfk', 'm4a1', 'nk', 'parwics', 'parwics2', 'tianenmen', 'usa', 'whoarethey-1', 'whoarethey-3', 'whoarethey-2', 'whoarethey-4', 'grand-central', 'x', 'syria', 'f22', 'desert-storm', 'aristotle', 'a1'];
     let randomItem = items[Math.floor(Math.random() * items.length)];
-    preset = "https://parwics.com/products/" + randomItem
+    preset = "products/" + randomItem
   }
   
 
