@@ -15817,7 +15817,9 @@ function dx() {
                         : (typeof source !== "undefined" && source === "game4") ? "YOU'RE FAST ENOUGH. DISCOUNT CODE: J8VGZE62HTZW 30% OFF, ONLY UP FOR 2 WEEKS." : 
                           (typeof source !== "undefined" && source === "game5") 
                           ? "You passed."
-                          :n,
+                          : (typeof source !== "undefined" && source === "game6") ?
+                            "You win."
+                            :n,
           })
         })
     )
