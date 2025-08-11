@@ -15777,7 +15777,19 @@ function dx() {
     
     document.getElementById("game4counter").style.display = "block";
     document.getElementById("game4counter").innerHTML = toString(formatTime(0));
+  } else if (source === "game5") {
+    let redirectScheduled = false;
+
+    if (e.gameStatus === "playerWin" && !redirectScheduled) {
+      redirectScheduled = true;
+      setTimeout(() => {
+        window.location.href = "https://parwics.com";
+      }, 
+      source === "game5" ? 2000 : 0
+    ); // delay in milliseconds
+    }
   }
+
     
     return e.gameStatus === "playerWin"
     ? (typeof source !== "undefined" && (source === "game1" || source === "game3")
@@ -15802,7 +15814,10 @@ function dx() {
             className: "text-black underline",
             children: (typeof source !== "undefined" && source === "game2") 
                         ? n + preset
-                        : (typeof source !== "undefined" && source === "game4") ? "YOU'RE FAST ENOUGH. DISCOUNT CODE: J8VGZE62HTZW 30% OFF, ONLY UP FOR 2 WEEKS." : n,
+                        : (typeof source !== "undefined" && source === "game4") ? "YOU'RE FAST ENOUGH. DISCOUNT CODE: J8VGZE62HTZW 30% OFF, ONLY UP FOR 2 WEEKS." : 
+                          (typeof source !== "undefined" && source === "game5") 
+                          ? "You passed."
+                          :n,
           })
         })
     )
