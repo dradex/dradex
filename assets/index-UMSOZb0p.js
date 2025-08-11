@@ -15828,7 +15828,7 @@ function dx() {
           children: T.jsx("a", { 
             href: (typeof source !== "undefined" && source === "game2") 
                     ? n + preset
-                    : n,
+                    : n + `?source=${encodeURIComponent(source)}`,
             target: "_blank",
             rel: "noopener noreferrer",  
             className: "text-black underline",
