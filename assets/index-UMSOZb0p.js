@@ -15738,7 +15738,7 @@ function dx() {
   function update(text) {
     const now = performance.now();
     const elapsed = accumulated + (running ? now - startTimestamp : 0);
-    text.innerHTML = formatTime(elapsed);
+    text.innerHTML = toString(formatTime(elapsed));
     rafId = requestAnimationFrame(update);
   }
 
@@ -15774,7 +15774,7 @@ function dx() {
     if (!rafId) rafId = requestAnimationFrame(update);
 
     document.getElementById("game4counter").style.display = "block";
-    document.getElementById("game4counter").innerHTML = formatTime(0);
+    document.getElementById("game4counter").innerHTML = toString(formatTime(0));
   }
   
     return e.gameStatus === "playerWin"
