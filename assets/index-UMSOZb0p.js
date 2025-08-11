@@ -15783,7 +15783,7 @@ function dx() {
     if (e.gameStatus === "playerWin" && !redirectScheduled) {
       redirectScheduled = true;
       setTimeout(() => {
-        window.location.href = "https://parwics.com";
+        window.location.href = n + `?utm_source=${encodeURIComponent(source)}`;
       }, 
       source === "game5" ? 2000 : 0
     ); // delay in milliseconds
@@ -15793,7 +15793,7 @@ function dx() {
     if (e.gameStatus === "playerWin" && !redirectScheduled) {
       redirectScheduled = true;
       setTimeout(() => {
-        window.location.href = "https://parwics.com";
+        window.location.href = n + `?utm_source=${encodeURIComponent(source)}`;
       }, 
       source === "game7" ? 0 : 0
     ); // delay in milliseconds
@@ -15803,14 +15803,12 @@ function dx() {
     if (e.gameStatus === "playerWin" && !redirectScheduled) {
       redirectScheduled = true;
       setTimeout(() => {
-        window.location.href = "https://parwics.com";
+        window.location.href = n + `?utm_source=${encodeURIComponent(source)}`;
       }, 
       source === "game8" ? 3500 : 0
     ); // delay in milliseconds
     }
   }
-
-    
     return e.gameStatus === "playerWin"
     ? (typeof source !== "undefined" && (source === "game1" || source === "game3" || source === "game8")
       ? T.jsx("div", {
@@ -15828,7 +15826,7 @@ function dx() {
           children: T.jsx("a", { 
             href: (typeof source !== "undefined" && source === "game2") 
                     ? n + preset
-                    : n + `?source=${encodeURIComponent(source)}`,
+                    : n + `?utm_source=${encodeURIComponent(source)}`,
             target: "_blank",
             rel: "noopener noreferrer",  
             className: "text-black underline",
