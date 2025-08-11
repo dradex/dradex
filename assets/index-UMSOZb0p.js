@@ -15720,7 +15720,7 @@ function dx() {
   
   let preset;
 
-  if (source === "game1") {
+  if (source === "game1" || source === "game3") {
     let redirectScheduled = false;
 
     if (e.gameStatus === "playerWin" && !redirectScheduled) {
