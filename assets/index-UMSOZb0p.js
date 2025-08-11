@@ -15727,14 +15727,15 @@ function dx() {
         window.location.href = "https://parwics.com";
       }, 3000); // delay in milliseconds
     }
-
-    
   }
 
+  const d = new Date();
+
   if (source === "game2") {
-    document.getElementById("game1Banner").style.display = "block";
+    console.log(d);
+    document.getElementById("game2Date").style.display = "block";
   } else {
-    document.getElementById("game1Banner").style.display = "none";
+    document.getElementById("game2Date").style.display = "none";
   }
 
   T.jsx("div", {
