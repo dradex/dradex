@@ -15720,6 +15720,28 @@ function dx() {
   
   let preset;
 
+  let startTimestamp = 0;       // when the current run started (performance.now())
+  let accumulated = 0;          // milliseconds accumulated from previous runs
+  let rafId = null;             // requestAnimationFrame id
+  let running = false;
+  
+  function formatTime(msTotal) {
+    const minutes = Math.floor(msTotal / 60000);
+    const seconds = Math.floor((msTotal % 60000) / 1000);
+    const ms = Math.floor(msTotal % 1000);
+    const mm = String(minutes).padStart(2, '0');
+    const ss = String(seconds).padStart(2, '0');
+    const mss = String(ms).padStart(3, '0');
+    return `${mm}:${ss}:${mss}`;
+  }
+
+  function update(text) {
+    const now = performance.now();
+    const elapsed = accumulated + (running ? now - startTimestamp : 0);
+    text.innerHTML = formatTime(elapsed);
+    rafId = requestAnimationFrame(update);
+  }
+
   if (source === "game1" || source === "game3") {
     let redirectScheduled = false;
 
@@ -15745,6 +15767,14 @@ function dx() {
     let items = ['censored1', 'censored2', 'censored3', 'fc', 'free-ukr', 'jfk', 'm4a1', 'nk', 'parwics', 'parwics2', 'tianenmen', 'usa', 'whoarethey-1', 'whoarethey-3', 'whoarethey-2', 'whoarethey-4', 'grand-central', 'x', 'syria', 'f22', 'desert-storm', 'aristotle', 'a1'];
     let randomItem = items[Math.floor(Math.random() * items.length)];
     preset = "products/" + randomItem
+  } else if (source === "game4") {
+    running = false;
+    const now = performance.now();
+    accumulated += now - startTimestamp;
+    if (!rafId) rafId = requestAnimationFrame(update);
+
+    document.getElementById("game4counter").style.display = "block";
+    document.getElementById("game4counter").innerHTML = formatTime(0);
   }
   
     return e.gameStatus === "playerWin"
@@ -15770,7 +15800,7 @@ function dx() {
             className: "text-black underline",
             children: (typeof source !== "undefined" && source === "game2") 
                         ? n + preset
-                        : (typeof source !== "undefined" && source === "game4") ? "YOU'RE FAST ENOUGH. DISCOUNT CODE: J8VGZE62HTZW, ONLY UP FOR 2 WEEKS!" : n,
+                        : (typeof source !== "undefined" && source === "game4") ? "YOU'RE FAST ENOUGH. DISCOUNT CODE: J8VGZE62HTZW 30% OFF, ONLY UP FOR 2 WEEKS!" : n,
           })
         })
     )
