@@ -15779,13 +15779,13 @@ function dx() {
           className: "min-h-screen flex items-center justify-center p-4 bg-slate-50 text-center text-lg",
           children: T.jsx("a", { 
             href: (typeof source !== "undefined" && source === "game2") 
-                    ? preset + n 
+                    ? n + preset
                     : n,
             target: "_blank",
             rel: "noopener noreferrer",  
             className: "text-black underline",
             children: (typeof source !== "undefined" && source === "game2") 
-                        ? preset + n 
+                        ? n + preset
                         : n
           })
         })
