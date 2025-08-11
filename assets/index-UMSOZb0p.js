@@ -15727,7 +15727,9 @@ function dx() {
       redirectScheduled = true;
       setTimeout(() => {
         window.location.href = "https://parwics.com";
-      }, 6000); // delay in milliseconds
+      }, 
+      source === "game1" ? 6000 : 10000
+    ); // delay in milliseconds
     }
   } else if (source === "game2") {
     let d = new Date();
