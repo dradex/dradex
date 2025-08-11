@@ -15779,7 +15779,14 @@ function dx() {
     document.getElementById("game4counter").style.display = "block";
     document.getElementById("game4counter").innerHTML = toString(formatTime(0));
   }
-  
+    if (e.gameStatus ==="playerWin" && (source === "game4")){
+      if (running) { // only stops if running
+        running = false;
+        accumulated += performance.now() - startTimestamp;
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    }
     return e.gameStatus === "playerWin"
     ? (typeof source !== "undefined" && (source === "game1" || source === "game3")
       ? T.jsx("div", {
