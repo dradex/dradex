@@ -15728,18 +15728,18 @@ function dx() {
       }, 3000); // delay in milliseconds
     }
   } else if (source === "game2") {
-    const d = new Date();
-    const day = d.getDate();
-    const month = d.getMonth();
-    const year = d.getFullYear();
+    let d = new Date();
+    let day = d.getDate();
+    let month = d.getMonth();
+    let year = d.getFullYear();
 
     const fullString = day.toString() + "." + month.toString() + "." +  year.toString()
 
     document.getElementById("game2Date").style.display = "block";
     document.getElementById("game2Date").innerHTML = fullString;
 
-    const items = ['censored1', 'censored2', 'censored3', 'fc', 'free-ukr', 'jfk', 'm4a1', 'nk', 'parwics', 'parwics2', 'tianenmen', 'usa', 'whoarethey-1', 'whoarethey-3', 'whoarethey-2', 'whoarethey-4', 'grand-central', 'x', 'syria', 'f22', 'desert-storm', 'aristotle', 'a1'];
-    const randomItem = items[Math.floor(Math.random() * items.length)];
+    let items = ['censored1', 'censored2', 'censored3', 'fc', 'free-ukr', 'jfk', 'm4a1', 'nk', 'parwics', 'parwics2', 'tianenmen', 'usa', 'whoarethey-1', 'whoarethey-3', 'whoarethey-2', 'whoarethey-4', 'grand-central', 'x', 'syria', 'f22', 'desert-storm', 'aristotle', 'a1'];
+    let randomItem = items[Math.floor(Math.random() * items.length)];
     n = "https://parwics.com/products/" + randomItem
   }
   
