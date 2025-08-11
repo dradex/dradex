@@ -15769,10 +15769,12 @@ function dx() {
     let randomItem = items[Math.floor(Math.random() * items.length)];
     preset = "products/" + randomItem
   } else if (source === "game4") {
-    running = false;
-    const now = performance.now();
-    accumulated += now - startTimestamp;
-    if (!rafId) rafId = requestAnimationFrame(update);
+    if (!running) {
+      running = true;
+      const now = performance.now();
+      accumulated += now - startTimestamp;
+      if (!rafId) rafId = requestAnimationFrame(update);
+    }
     
     document.getElementById("game4counter").style.display = "block";
     document.getElementById("game4counter").innerHTML = toString(formatTime(0));
