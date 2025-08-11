@@ -15737,8 +15737,8 @@ function dx() {
   const fullString = day.toString() + "." + month.toString() + "." +  year.toString()
 
   if (source === "game2") {
-    console.log(fullString);
     document.getElementById("game2Date").style.display = "block";
+    document.getElementById("game2Date").innerHTML = fullString;
   } else {
     document.getElementById("game2Date").style.display = "none";
   }
