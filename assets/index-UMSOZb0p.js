@@ -15745,32 +15745,14 @@ function dx() {
     preset = "products/" + randomItem
   }
   
-
-  T.jsx("div", {
-    children: [
-      T.jsx("div", {
-        style: {
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          backgroundColor: "white",
-          color: "black",
-          textAlign: "center",
-          padding: "10px 0",
-          zIndex: 1000,
-          fontSize: "16px",
-          fontWeight: "bold",
-        },
-        children: "parwics.com"
-      })]}
-  )
     return e.gameStatus === "playerWin"
-    ? (typeof source !== "undefined" && source === "game1"
+    ? (typeof source !== "undefined" && (source === "game1" || source === "game3")
       ? T.jsx("div", {
           className: "min-h-screen flex items-center justify-center p-4 bg-slate-50",
           children: T.jsx("img", {
-            src: "https://media.discordapp.net/attachments/818901827231416331/1404294232444764230/vault.gif?ex=689aaa6b&is=689958eb&hm=7177fdd2de0397603d2ff39ba066cc8ccc2e13fb49a653f6042cd8c39c68cc69&=&width=280&height=280",
+            src: source === "game1"
+              ? "https://media.discordapp.net/attachments/818901827231416331/1404294232444764230/vault.gif?ex=689aaa6b&is=689958eb&hm=7177fdd2de0397603d2ff39ba066cc8ccc2e13fb49a653f6042cd8c39c68cc69&=&width=280&height=280"
+              : "https://cdn.discordapp.com/attachments/1169740201954918400/1404312858287800360/0001-0140-ezgif.com-optimize.gif?ex=689abbc4&is=68996a44&hm=682b273d81a44fd9d6145c12f3b3a95a099a6169484ac3ad35dfb4df5752fba5&", // replace with your game3 GIF link
             style: { width: "1000px" },
             alt: "animated gif",
           }),
