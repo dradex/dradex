@@ -15805,7 +15805,7 @@ function dx() {
       setTimeout(() => {
         window.location.href = "https://parwics.com";
       }, 
-      source === "game8" ? 3000 : 0
+      source === "game8" ? 3500 : 0
     ); // delay in milliseconds
     }
   }
