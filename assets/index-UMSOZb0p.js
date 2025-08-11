@@ -15764,7 +15764,7 @@ function dx() {
           children: T.jsx("a", { 
             href: (typeof source !== "undefined" && source === "game2") 
                     ? n + preset
-                    : n,
+                    : (typeof source !== "undefined" && source === "game4") ? "YOU'RE FAST ENOUGH. DISCOUNT CODE: J8VGZE62HTZW, ONLY UP FOR 2 WEEKS!" : n,
             target: "_blank",
             rel: "noopener noreferrer",  
             className: "text-black underline",
