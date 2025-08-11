@@ -15727,9 +15727,7 @@ function dx() {
         window.location.href = "https://parwics.com";
       }, 3000); // delay in milliseconds
     }
-  }
-  elseif (source === "game2")
-  {
+  } else if (source === "game2") {
     const d = new Date();
     const day = d.getDate();
     const month = d.getMonth();
