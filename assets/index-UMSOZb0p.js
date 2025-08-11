@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 const source = new URLSearchParams(window.location.search).get('src');
 console.log(`User came from: ${source}`);
 
@@ -15737,8 +15739,7 @@ function dx() {
 
   function update() {
     const now = performance.now();
-    const elapsed = accumulated + (running ? now - startTimestamp : 0);
-    console.log(elapsed);
+    const elapsed = accumulated + (running ? now - startTimestamp : 0) - 2000;
     document.getElementById("game4counter").innerHTML = formatTime(elapsed);
     rafId = requestAnimationFrame(update);
   }
@@ -15779,15 +15780,14 @@ function dx() {
     document.getElementById("game4counter").style.display = "block";
     document.getElementById("game4counter").innerHTML = toString(formatTime(0));
   }
-    useEffect(() => {
-    if (e.gameStatus === "playerWin" && source === "game4" && running) {
-      running = false;
-      accumulated += performance.now() - startTimestamp;
-      cancelAnimationFrame(rafId);
-      rafId = null;
+    if (e.gameStatus ==="playerWin" && (source === "game4")){
+      if (running) { // only stops if running
+        running = false;
+        accumulated += performance.now() - startTimestamp;
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
     }
-    }, [e.gameStatus, source, running]);
-    
     return e.gameStatus === "playerWin"
     ? (typeof source !== "undefined" && (source === "game1" || source === "game3")
       ? T.jsx("div", {
