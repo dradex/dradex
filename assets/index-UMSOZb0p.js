@@ -15737,7 +15737,7 @@ function dx() {
 
   function update() {
     const now = performance.now();
-    const elapsed = accumulated + (running ? now - startTimestamp : 0) - 1000;
+    const elapsed = accumulated + (running ? now - startTimestamp : 0) - 300;
     document.getElementById("game4counter").innerHTML = formatTime(elapsed);
     rafId = requestAnimationFrame(update);
   }
