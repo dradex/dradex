@@ -15738,7 +15738,7 @@ function dx() {
   function update() {
     const now = performance.now();
     const elapsed = accumulated + (running ? now - startTimestamp : 0);
-    console.log(formatTime(elapsed));
+    console.log(elapsed);
     document.getElementById("game4counter").innerHTML = formatTime(elapsed);
     rafId = requestAnimationFrame(update);
   }
@@ -15773,7 +15773,7 @@ function dx() {
     const now = performance.now();
     accumulated += now - startTimestamp;
     if (!rafId) rafId = requestAnimationFrame(update);
-
+    
     document.getElementById("game4counter").style.display = "block";
     document.getElementById("game4counter").innerHTML = toString(formatTime(0));
   }
@@ -15801,7 +15801,7 @@ function dx() {
             className: "text-black underline",
             children: (typeof source !== "undefined" && source === "game2") 
                         ? n + preset
-                        : (typeof source !== "undefined" && source === "game4") ? "YOU'RE FAST ENOUGH. DISCOUNT CODE: J8VGZE62HTZW 30% OFF, ONLY UP FOR 2 WEEKS!" : n,
+                        : (typeof source !== "undefined" && source === "game4") ? "YOU'RE FAST ENOUGH. DISCOUNT CODE: J8VGZE62HTZW 30% OFF, ONLY UP FOR 2 WEEKS." : n,
           })
         })
     )
