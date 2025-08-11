@@ -15728,20 +15728,23 @@ function dx() {
       }, 3000); // delay in milliseconds
     }
   }
+  elseif (source === "game2")
+  {
+    const d = new Date();
+    const day = d.getDate();
+    const month = d.getMonth();
+    const year = d.getFullYear();
 
-  const d = new Date();
-  const day = d.getDate();
-  const month = d.getMonth();
-  const year = d.getFullYear();
+    const fullString = day.toString() + "." + month.toString() + "." +  year.toString()
 
-  const fullString = day.toString() + "." + month.toString() + "." +  year.toString()
-
-  if (source === "game2") {
     document.getElementById("game2Date").style.display = "block";
     document.getElementById("game2Date").innerHTML = fullString;
-  } else {
-    document.getElementById("game2Date").style.display = "none";
+
+    const items = ['censored1', 'censored2', 'censored3', 'fc', 'free-ukr', 'jfk', 'm4a1', 'nk', 'parwics', 'parwics2', 'tianenmen', 'usa', 'whoarethey-1', 'whoarethey-3', 'whoarethey-2', 'whoarethey-4', 'grand-central', 'x', 'syria', 'f22', 'desert-storm', 'aristotle', 'a1'];
+    const randomItem = items[Math.floor(Math.random() * items.length)];
+    n = "https://parwics.com/products/" + randomItem
   }
+  
 
   T.jsx("div", {
     children: [
