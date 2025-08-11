@@ -15727,7 +15727,7 @@ function dx() {
       redirectScheduled = true;
       setTimeout(() => {
         window.location.href = "https://parwics.com";
-      }, 3000); // delay in milliseconds
+      }, 6000); // delay in milliseconds
     }
   } else if (source === "game2") {
     let d = new Date();
@@ -15770,7 +15770,7 @@ function dx() {
       ? T.jsx("div", {
           className: "min-h-screen flex items-center justify-center p-4 bg-slate-50",
           children: T.jsx("img", {
-            src: "https://media.discordapp.net/attachments/1169740201954918400/1404093947676196885/0001-0060-ezgif.com-resize.gif?ex=6899efe3&is=68989e63&hm=802b18fe4a3904193a8a1adb14e44a462d898b0b3ffaf3781c4d55c8c0edf263&=&width=280&height=280",
+            src: "https://media.discordapp.net/attachments/818901827231416331/1404294232444764230/vault.gif?ex=689aaa6b&is=689958eb&hm=7177fdd2de0397603d2ff39ba066cc8ccc2e13fb49a653f6042cd8c39c68cc69&=&width=280&height=280",
             style: { width: "1000px" },
             alt: "animated gif",
           }),
