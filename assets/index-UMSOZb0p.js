@@ -15735,10 +15735,10 @@ function dx() {
     return `${mm}:${ss}:${mss}`;
   }
 
-  function update(text) {
+  function update() {
     const now = performance.now();
     const elapsed = accumulated + (running ? now - startTimestamp : 0);
-    text.innerHTML = toString(formatTime(elapsed));
+    document.getElementById("game4counter").innerHTML = toString(formatTime(elapsed));
     rafId = requestAnimationFrame(update);
   }
 
