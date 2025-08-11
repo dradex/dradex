@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 const source = new URLSearchParams(window.location.search).get('src');
 console.log(`User came from: ${source}`);
 
@@ -15780,7 +15778,7 @@ function dx() {
     document.getElementById("game4counter").style.display = "block";
     document.getElementById("game4counter").innerHTML = toString(formatTime(0));
   }
-    if (e.gameStatus ==="playerWin" && (source === "game4")){
+    if (source === "game4"){
       if (running) { // only stops if running
         running = false;
         accumulated += performance.now() - startTimestamp;
