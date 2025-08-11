@@ -15727,6 +15727,12 @@ function dx() {
         window.location.href = "https://parwics.com";
       }, 3000); // delay in milliseconds
     }
+
+    if (source === "game2") {
+      document.getElementById("game1Banner").style.display = "block";
+    } else {
+      document.getElementById("game1Banner").style.display = "none";
+    }
   }
 
   T.jsx("div", {
@@ -15748,9 +15754,7 @@ function dx() {
         children: "parwics.com"
       })]}
   )
-
-  
-  return e.gameStatus === "playerWin"
+    return e.gameStatus === "playerWin"
     ? (typeof source !== "undefined" && source === "game1"
       ? T.jsx("div", {
           className: "min-h-screen flex items-center justify-center p-4 bg-slate-50",
