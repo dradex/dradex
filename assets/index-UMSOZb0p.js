@@ -15738,6 +15738,7 @@ function dx() {
   function update() {
     const now = performance.now();
     const elapsed = accumulated + (running ? now - startTimestamp : 0);
+    console.log(formatTime(elapsed));
     document.getElementById("game4counter").innerHTML = toString(formatTime(elapsed));
     rafId = requestAnimationFrame(update);
   }
