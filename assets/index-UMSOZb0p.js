@@ -15728,7 +15728,7 @@ function dx() {
       setTimeout(() => {
         window.location.href = "https://parwics.com";
       }, 
-      source === "game1" ? 6000 : 10000
+      source === "game1" ? 6000 : 11000
     ); // delay in milliseconds
     }
   } else if (source === "game2") {
