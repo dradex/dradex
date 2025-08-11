@@ -15728,11 +15728,13 @@ function dx() {
       }, 3000); // delay in milliseconds
     }
 
-    if (source === "game2") {
-      document.getElementById("game1Banner").style.display = "block";
-    } else {
-      document.getElementById("game1Banner").style.display = "none";
-    }
+    
+  }
+
+  if (source === "game2") {
+    document.getElementById("game1Banner").style.display = "block";
+  } else {
+    document.getElementById("game1Banner").style.display = "none";
   }
 
   T.jsx("div", {
